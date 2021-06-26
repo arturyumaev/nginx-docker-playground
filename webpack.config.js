@@ -1,5 +1,3 @@
-const path = require('path');
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const svgToMiniDataURI = require('mini-svg-data-uri');
 
@@ -9,7 +7,6 @@ module.exports = {
   mode: 'development',
   entry: './src/index.js',
   output: {
-    path: path.resolve('/Users/arturyumaev/data/www'),
     filename: 'bundle.js'
   },
   devServer: {
@@ -18,7 +15,6 @@ module.exports = {
     historyApiFallback: true,
     open: true
   },
-  devtool: 'inline-source-map',
   plugins: [
     new HtmlWebpackPlugin({
       template: 'public/index.html',

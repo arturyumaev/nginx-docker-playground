@@ -10,7 +10,7 @@ RUN apt-get update && \
 RUN git clone https://github.com/arturyumaev/nginx-docker-playground.git &&\
     cd nginx-docker-playground &&\
     npm install $$\
-    npm run build
+    npx webpack
 
 
 CMD ["echo", "$OSTYPE"]
