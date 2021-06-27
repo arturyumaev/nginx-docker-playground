@@ -8,9 +8,13 @@ RUN apt-get update -y &&\
     apt-get install -y nginx &&\
     git clone https://github.com/arturyumaev/nginx-docker-playground.git /usr/src/app/
 
-WORKDIR /usr/src/app/nginx-docker-playground/
+WORKDIR /usr/src/app/
 
-RUN npm install
-RUN npm run build
+RUN npm install &&\
+    npm run build
 
-CMD ["nginx", "-v"]
+# cp nginx.conf /etc/nginx/
+
+EXPOSE 3000
+
+CMD ["ls", "-la"]
