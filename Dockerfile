@@ -11,10 +11,9 @@ RUN apt-get update -y &&\
 WORKDIR /usr/src/app/
 
 RUN npm install &&\
-    npm run build
-
-# cp nginx.conf /etc/nginx/
+    npm run build &&\
+    cp nginx.conf /etc/nginx/
 
 EXPOSE 3000
 
-CMD ["ls", "-la"]
+CMD ["nginx"]
