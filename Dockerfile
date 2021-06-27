@@ -16,4 +16,4 @@ RUN npm install &&\
 
 EXPOSE 3000
 
-CMD ["nginx"]
+CMD ["nginx", "-g", "daemon off;"]
